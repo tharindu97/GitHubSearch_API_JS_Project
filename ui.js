@@ -5,7 +5,7 @@ class UI{
     //Display profile UI
     showProfile(user){
         this.profile.innerHTML = `
-        <div class="card card-body mb-3">
+        <div class="card card-body mb-3"  style="margin-left: 100px; margin-right: 100px;">
         <div class="row">
             <div class="col-md-3">
                 <img src="${user.avatar_url}" class="img-fluid mb-2">
@@ -36,16 +36,15 @@ class UI{
         let output = '';
         repos.forEach(function(repo){
             output += `
-                <div class="card card-body mb-2">
+                <div class="card card-body mb-2" style="margin-left: 100px; margin-right: 100px;">
                     <div class="row">
-                        <div class="col-mb-6">
+                        <div class="col-md-6">
                             <a href="${repo.html_url}" target="_blank" >${repo.name}</a>
                         </div>
-                        <div class="col-mb-6">
+                        <div class="col-md-6">
                             <span class="badge badge-primary">Stars:${repo.stargazers_count}</span>
                             <span class="badge badge-secondary">Watchers:${repo.watchers_count}</span>
                             <span class="badge badge-success">Forks:${repo.forms_count}</span>
-                        
                         </div>
                     </div>
                 </div>
